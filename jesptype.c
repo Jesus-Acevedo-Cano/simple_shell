@@ -5,7 +5,7 @@ int main(void)
 	char *ptr, *tok;
 	int count = 0;
 	size_t cont = 0;
-	char* argv[] = { "/bin/ls", "-la", "/usr/", NULL };
+	char* argv[] = { "/bin/ls", "-la", "/usr/", NULL };//argv[2] = path option
 	char* envp[] = { NULL };
 
 	while (1)
@@ -14,10 +14,10 @@ int main(void)
 		getline(&ptr, &cont, stdin);
 		/*tok = strtok(ptr, " \n\t\r");*/
 		//pruebas para ejecutar funciones
-		//argv[0] = ptr;//buscar manera de concatenar para que quede /bin/ + ptr(entrada de codigo)*/ 
-		fork();
+		//argv[0] = ptr?;// concat /bin/ + ptr(input)
+		//fork();
 		execve(argv[0], argv, envp);
-		perror("Could not exec");
+		perror("Could not execve");
 	}
 	return (0);
 }
