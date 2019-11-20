@@ -18,10 +18,11 @@ int main(void)
 	{
 		av[c] = tok;
 		tok = strtok(NULL, " \n\t");
-		//printf("%s\n", *(av + c));
+//		printf("%s\n", *(av + c));
 		c++;
 	}
-	
+	exect(av);
 	}
-	return (0);
+
+	return (EXIT_SUCCESS);
 }

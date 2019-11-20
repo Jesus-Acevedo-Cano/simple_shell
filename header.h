@@ -1,14 +1,10 @@
-#ifndef HEAD
-#define HEAD
-
-#include <string.h>
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+#ifndef OURLUB_H
+#define OURLIB_H
+/*libraries*/
 #include <unistd.h>
-
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+/*prototype functions*/
+int exect(char **args);
 #endif
