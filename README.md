@@ -17,7 +17,12 @@ Clone the repo below and compile it
 https://github.com/Jesus-Acevedo-Cano/simple_shell.git
 
 ```
-## Repository contents
+#### How to compile
+Use this flags 
+```
+gcc -Wall -Werror -Wextra -Pedantic *.c -o hsh
+```
+## Repository content
 
 //Simple shell repo files here
 
@@ -31,3 +36,7 @@ Examples of the use
 
 - Jesus Evelio Acevedo Cano 
 - Joan Sebastian Garcia 
+
+## License
+
+Only if needed
