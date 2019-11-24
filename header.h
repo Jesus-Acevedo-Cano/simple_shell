@@ -6,5 +6,6 @@
 #include <string.h>
 #include <stdio.h>
 /*prototype functions*/
-int exect(char **args);
+int rdl(int ac, char *av[], char *envp[]);
+int exect(char **args, char *envp[]);
 #endif
