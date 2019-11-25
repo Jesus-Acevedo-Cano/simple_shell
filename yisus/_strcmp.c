@@ -11,6 +11,7 @@ int _strcmp(char *s1, char *s2)
 {
 	int len = 0, count = 0;
 	int res;
+
 	while (s1[len] != '\0' && s2[count] != '\0')
 	{
 		res = s1[len] - s2[count];
