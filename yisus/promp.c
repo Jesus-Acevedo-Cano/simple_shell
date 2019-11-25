@@ -26,7 +26,6 @@ int promp(int ac, char *av[], char *envp[])
 				count++;
 			}
 			tokens[count] = NULL;
-			//printf("%s", tokens[0]);
 			son = fork();
 			if (son == -1)
 			{
@@ -37,7 +36,7 @@ int promp(int ac, char *av[], char *envp[])
 				exec = execve(tokens[0], tokens, envp);
 				if (exec == -1)
 				{
-					perror("execve");
+					path(tokens, envp);
 					exit(0);
 				}
 				exit(0);

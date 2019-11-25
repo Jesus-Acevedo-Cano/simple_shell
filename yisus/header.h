@@ -12,4 +12,9 @@
 #include <errno.h>
 /*prototype functions*/
 int promp(int ac, char *av[], char *envp[]);
+int _strcmp(char *s1, char *s2);
+void path(char **tokens, char **env);
+int exec(char *fakepath, char **tokens, char **env);
+char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
 #endif
