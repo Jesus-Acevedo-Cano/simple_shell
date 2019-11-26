@@ -14,7 +14,8 @@ int promp(int ac, char *av[], char *envp[])
 	size_t bufLen;
 	int getl, count = 0, exec, sts;
 	pid_t son;
-
+	(void)ac;
+	(void)av;
 	while (1)
 	{
 		write(1, "$ ", 2);
