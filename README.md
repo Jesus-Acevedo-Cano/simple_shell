@@ -49,8 +49,34 @@ concatenate strings
 
 ## Examples
 
+##### usage
 ```
-Examples of the use
+ $ ls
+```
+
+##### on screen
+```
+AUTHORS  header.h  main.c  man_1_simple_shell  path.c  promp.c  proof  README.md  _strcat.c  _strcmp.c  _strcpy.c
+
+```
+##### usage
+```
+ $ ls -l
+```
+##### on screen
+
+```
+-rw-rw-r-- 1 vagrant vagrant   224 Nov 26 18:56 AUTHORS
+-rw-rw-r-- 1 vagrant vagrant   510 Nov 26 16:58 header.h
+-rw-rw-r-- 1 vagrant vagrant   283 Nov 26 16:17 main.c
+-rwxr-xr-- 1 vagrant vagrant  1065 Nov 26 20:19 man_1_simple_shell
+-rw-rw-r-- 1 vagrant vagrant  1312 Nov 26 16:17 path.c
+-rw-rw-r-- 1 vagrant vagrant   912 Nov 26 16:39 promp.c
+-rwxrwxr-x 1 vagrant vagrant 13581 Nov 26 16:39 proof
+-rw-rw-r-- 1 vagrant vagrant  1219 Nov 26 20:24 README.md
+-rw-rw-r-- 1 vagrant vagrant   375 Nov 26 16:17 _strcat.c
+-rw-rw-r-- 1 vagrant vagrant   373 Nov 26 16:17 _strcmp.c
+-rw-rw-r-- 1 vagrant vagrant   342 Nov 26 16:17 _strcpy.c
 
 ```
 

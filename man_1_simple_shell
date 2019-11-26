@@ -3,17 +3,44 @@
 .TH simple shell 1 "28 Nov 2019" "1.0" "simple shell man page"
 .SH NAME
 simple_shell -- hsh
+
+.SH HEADERS
+.B #include """header.h"""
+
 .SH SYNOPSIS
-simple shell [USERNAME]
+command [-options]
+
 .SH DESCRIPTION
-simle shell project that allows us to use basic functions the same way that a normal shell on our machine
+simle shell project that allows us to use basic commands in a command line interpreter
+
+.SH    Overview
+The shell is a command line interpreter and generally executes them.
+
+.SH USAGE - EXAMPLE
+./hsh
+.PP
+$ {command} (HIT ENTER)
+.LP
+
+.LP     Examples:
+        $ /bin/ls
+        $ ls
+        $ ls -la
+
 .SH OPTIONS
-List of all options that our simple shell handle.
+Simple shell that allows us to handle basic commands of the original shell.
+.SS Arguments
+The first argument (position 0) is assumed as a file containing shell
+commands. The following arguments and their positional parameters are set
+for the remaining arguments.
+
 .SH SEE ALSO
-sh(1)
+.BR sh (1)
+
 .SH BUGS
 No known bugs yet.
-.SH AUTHOR
+
+.SH AUTHORS
 Jesus Evelio Acevedo Cano (jeacevedocano@gmail.com)
 .PP
 Joan Sebastian Garcia (jsebastian.garcia1995@gmail.com)
