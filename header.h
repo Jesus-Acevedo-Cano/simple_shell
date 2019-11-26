@@ -5,7 +5,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <errno.h>
 /*prototype functions*/
-int rdl(int ac, char *av[], char *envp[]);
-int exect(char **args, char *envp[]);
+int promp(int ac, char *av[], char *envp[]);
+int _strcmp(char *s1, char *s2);
+void path(char **tokens, char **env);
+int exec(char *fakepath, char **tokens, char **env);
+char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
 #endif

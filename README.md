@@ -2,9 +2,9 @@
 
 This is a Holberton school project in wich we will create our own shell to test the skills we been acquired
 
-## Description 
+## Description
 
-A functional Simple Shell project with basic functions that allows you to .... 
+A functional Simple Shell project with basic functions that allows you to ....
 
 ## Environment
 
@@ -12,31 +12,53 @@ This simple shell was built, developed and tested on a ubuntu 14.04 LTS virtual 
 
 ## How to install
 
-Clone the repo below and compile it 
+Clone the repo below and compile it
 ```
 https://github.com/Jesus-Acevedo-Cano/simple_shell.git
 
 ```
 #### How to compile
-Use this flags 
+
+Use this flags
+
 ```
 gcc -Wall -Werror -Wextra -Pedantic *.c -o hsh
 ```
 ## Repository content
 
-//Simple shell repo files here
+- #### header.h
+File with the used libraries and declared functions
+
+- #### main.c
+Main function
+
+- #### promp.c
+Function to get the input command
+
+- #### path.c
+File that contains the functions that handles the path and execute the commands
+
+- #### _strcpy.c
+copy strings
+
+- #### _strcmp.c
+compare strings
+
+- #### _strcat.c
+concatenate strings
 
 ## Examples
 
 ```
-Examples of the use 
+Examples of the use
+
 ```
 
 ## Authors
 
-- Jesus Evelio Acevedo Cano 
-- Joan Sebastian Garcia 
+- Jesus Evelio Acevedo Cano
+- Joan Sebastian Garcia
 
 ## License
 
-Only if needed
+...

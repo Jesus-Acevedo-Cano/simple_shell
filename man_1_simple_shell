@@ -1,8 +1,8 @@
-.\" Manpage for simple shell.
-.\" Contact jeacevedocano@gmail.com or correodesebas@correo.com to correct errors or typos.
-.TH man 1 "28 Nov 2019" "1.0" "simple shell manual"
+.\" Man page for simple shell.
+.\" Contact jeacevedocano@gmail.com or jsebastian.garcia1995@gmail.com to correct errors or typos.
+.TH simple shell 1 "28 Nov 2019" "1.0" "simple shell man page"
 .SH NAME
-simple shell \- create a new LDAP user
+simple_shell -- hsh
 .SH SYNOPSIS
 simple shell [USERNAME]
 .SH DESCRIPTION
@@ -16,4 +16,4 @@ No known bugs yet.
 .SH AUTHOR
 Jesus Evelio Acevedo Cano (jeacevedocano@gmail.com)
 .PP
-Joan Sebastian Garcia (sucorreomijo@example.com)
+Joan Sebastian Garcia (jsebastian.garcia1995@gmail.com)
