@@ -33,7 +33,7 @@ void path(char **tokens, char **env)
 				;
 			for (j = 0; find[j] != '\0'; j++)
 				;
-			fakepath = malloc(sizeof(char) * (i + j + 1));
+			fakepath = malloc(sizeof(char) * (i + j + 2));
 			if (fakepath == NULL)
 				perror("Error");
 			_strcpy(fakepath, find);
@@ -41,7 +41,9 @@ void path(char **tokens, char **env)
 			_strcat(fakepath, tokens[0]);
 			fakepath[i + j + 1] = '\0';
 			if (stat(fakepath, &sts) == 0)
+			{
 				exec(fakepath, tokens, env);
+			}
 			free(fakepath);
 			find = strtok(NULL, ":");
 		}
@@ -64,6 +66,10 @@ int exec(char *fakepath, char **tokens, char **env)
 	execute = execve(fakepath, tokens, env);
 
 	if (execute == -1)
+	{
 		perror("Execve error");
+		free(fakepath);
+	}
+	free(fakepath);
 	exit(0);
 }
