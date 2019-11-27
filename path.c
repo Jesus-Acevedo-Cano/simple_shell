@@ -2,7 +2,7 @@
 /**
  * path - function to get the path and concat with the input command
  * @tokens: pointer to pointer
- * @env: enviroment
+ * @env: environment
  *
  * Return: void
  */
