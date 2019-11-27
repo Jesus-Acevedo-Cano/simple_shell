@@ -1,29 +1,34 @@
 #include "header.h"
+/*
+ *_strlen - 
+ *
+ *
+ */
+int _strlen(char *s)
+{
+	int count = 0;
+
+	while (*s != '\0')
+	{
+		count++;
+		s++;
+	}
+	return (count);
+}
 /**
  * path - function to get the path and concat with the input command
  * @tokens: pointer to pointer
- * @env: enviroment
+ * @env: environment
  *
  * Return: void
  */
 void path(char **tokens, char **env)
 {
 	char *find, *fakepath;
-	int counter = 0, i, j;
+	int i, j;
 	struct stat sts;
 
-	find = strtok(env[counter], "=");
-
-	while (env[counter] != NULL)
-	{
-		if (_strcmp(find, "PATH") == 0)
-		{
-			find = strtok(NULL, "\n");
-			break;
-		}
-		counter++;
-		find = strtok(env[counter], "=");
-	}
+	find = getenv("PATH");
 	if (find != NULL)
 	{
 		find = strtok(find, ":");
