@@ -1,8 +1,8 @@
 .\" Man page for simple shell.
 .\" Contact jeacevedocano@gmail.com or jsebastian.garcia1995@gmail.com to correct errors or typos.
-.TH simple shell 1 "28 Nov 2019" "1.0" "simple shell man page"
+.TH simple_shell 1 "28 Nov 2019" "1.0" "simple shell man page"
 .SH NAME
-simple_shell -- hsh
+simple shell -- hsh
 
 .SH HEADERS
 .B #include """header.h"""
@@ -39,6 +39,7 @@ for the remaining arguments.
 
 .SH BUGS
 No known bugs yet.
+For bugs report, please send it to the authors mails bellow.
 
 .SH AUTHORS
 Jesus Evelio Acevedo Cano (jeacevedocano@gmail.com)

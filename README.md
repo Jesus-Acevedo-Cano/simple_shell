@@ -4,7 +4,7 @@ This is a Holberton school project in wich we will create our own shell to test 
 
 ## Description
 
-A functional Simple Shell project with basic functions that allows you to ....
+Holberton school Simple Shell project that allows you to use basic functions
 
 ## Environment
 
@@ -87,4 +87,4 @@ AUTHORS  header.h  main.c  man_1_simple_shell  path.c  promp.c  proof  README.md
 
 ## License
 
-...
+Free software [GNU](https://www.gnu.org/licenses/gpl-3.0.html)
