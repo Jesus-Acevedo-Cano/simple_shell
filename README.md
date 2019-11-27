@@ -83,8 +83,10 @@ AUTHORS  header.h  main.c  man_1_simple_shell  path.c  promp.c  proof  README.md
 ## Authors
 
 - Jesus Evelio Acevedo Cano
+[Github](https://github.com/Jesus-Acevedo-Cano)
 - Joan Sebastian Garcia
+[Github](https://github.com/Noah172)
 
 ## License
 
-Free software [GNU](https://www.gnu.org/licenses/gpl-3.0.html)
+Free software [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html)
