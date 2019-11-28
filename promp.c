@@ -10,9 +10,9 @@
  */
 int promp(int ac, char *av[], char *envp[])
 {
-	char *buf = NULL, *tok, *tokens[32], *exit_ = "exit\n";
+	char *buf = NULL, *tokens[32], *exit_ = "exit\n";
 	size_t bufLen;
-	int getl, count = 0, exec, sts;
+	int getl, exec, sts;
 	pid_t son;
 	(void)ac;
 	(void)av;
@@ -30,13 +30,7 @@ int promp(int ac, char *av[], char *envp[])
 		}
 		if (getl > 1)
 		{
-			tok = strtok(buf, " \t\n\r");
-			for (count = 0; tok != NULL; count++)
-			{
-				tokens[count] = tok;
-				tok = strtok(NULL, " \t\n\r");
-			}
-			tokens[count] = NULL;
+			tok(buf, tokens);
 			son = fork();
 			if (son == -1)
 				perror("fork");
@@ -45,8 +39,7 @@ int promp(int ac, char *av[], char *envp[])
 				exec = execve(tokens[0], tokens, envp);
 				if (exec == -1)
 					path(tokens, envp);
-				free(buf);
-				exit(0);
+				free(buf), exit(0);
 			}
 			if (son > 0)
 				wait(&sts);
@@ -54,4 +47,26 @@ int promp(int ac, char *av[], char *envp[])
 	}
 	free(buf);
 	return (0);
+}
+/**
+ * tok - function to separate the commands
+ * @buf: input commands
+ * @tokens: separated tokens
+ *
+ * Return: tokens
+ *
+ */
+char **tok(char *buf, char **tokens)
+{
+	char *tok;
+	int count;
+
+	tok = strtok(buf, " \t\n\r");
+	for (count = 0; tok != NULL; count++)
+	{
+		tokens[count] = tok;
+		tok = strtok(NULL, " \t\n\r");
+	}
+	tokens[count] = NULL;
+	return (tokens);
 }

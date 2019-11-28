@@ -19,5 +19,5 @@ void path(char **tokens, char **env);
 int exec(char *fakepath, char **tokens, char **env);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
-
+char **tok(char *buf, char **tokens);
 #endif
