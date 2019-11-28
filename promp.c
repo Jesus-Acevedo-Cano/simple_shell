@@ -12,7 +12,7 @@ int promp(int ac, char *av[], char *envp[])
 {
 	char *buf = NULL, *tokens[32], *exit_ = "exit\n";
 	size_t bufLen;
-	int getl, exec, sts;
+	int getl, sts;
 	pid_t son;
 	(void)ac;
 	(void)av;
@@ -26,7 +26,7 @@ int promp(int ac, char *av[], char *envp[])
 		}
 		if (getl == -1)
 		{
-			perror("getline"), free(buf), exit(0);
+			write(1, "\n", 1), free(buf), exit(0);
 		}
 		if (getl > 1)
 		{
@@ -36,8 +36,7 @@ int promp(int ac, char *av[], char *envp[])
 				perror("fork");
 			if (son == 0)
 			{
-				exec = execve(tokens[0], tokens, envp);
-				if (exec == -1)
+				if (execve(tokens[0], tokens, envp) == -1)
 					path(tokens, envp);
 				free(buf), exit(0);
 			}
