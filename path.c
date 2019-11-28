@@ -69,6 +69,7 @@ int exec(char *fakepath, char **tokens, char **env)
 	{
 		perror("Execve error");
 		free(fakepath);
+		return(127);
 	}
 	free(fakepath);
 	exit(0);

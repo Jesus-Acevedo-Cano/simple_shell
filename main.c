@@ -10,11 +10,13 @@
  */
 int main(int ac, char *av[], char *envp[])
 {
+	int i = 0;
+
 	if (ac > 1)
 	{
 		/*exec(ac, av, envp);*/
 	}
 	else
-		promp(ac, av, envp);
-	return (0);
+		i = promp(ac, av, envp);
+	return (i);
 }

@@ -22,7 +22,8 @@ int promp(int ac, char *av[], char *envp[])
 		getl = getline(&buf, &bufLen, stdin);
 		if (_strcmp(buf, exit_) == 0)
 		{
-			free(buf), exit(0);
+			free(buf);
+			return (0);
 		}
 		if (getl == -1)
 		{
