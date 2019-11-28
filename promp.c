@@ -1,4 +1,5 @@
 #include "header.h"
+
 /**
  * promp - function to get the commands
  * @ac: arguments counter
