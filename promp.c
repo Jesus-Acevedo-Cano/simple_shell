@@ -15,11 +15,11 @@ int promp(int ac, char *av[], char *envp[])
 	size_t bufLen;
 	int getl, sts;
 	pid_t son;
-	(void)ac;
 	(void)av;
 	while (1)
 	{
-		write(1, "$ ", 2);
+		if (isatty(STDIN_FILENO))
+			write(1, "$ ", 2);
 		getl = getline(&buf, &bufLen, stdin);
 		if (_strcmp(buf, exit_) == 0)
 		{
@@ -28,7 +28,10 @@ int promp(int ac, char *av[], char *envp[])
 		}
 		if (getl == -1)
 		{
-			write(1, "\n", 1), free(buf), exit(0);
+			if (isatty(STDIN_FILENO))
+				write(1, "\n", 1);
+			free(buf);
+			return (ac - ac);
 		}
 		if (getl > 1)
 		{
