@@ -21,10 +21,12 @@ int promp(int ac, char *av[], char *envp[])
 		write(1, "$ ", 2);
 		getl = getline(&buf, &bufLen, stdin);
 		if (_strcmp(buf, exit_) == 0)
-			exit(0);
+		{
+			free(buf), exit(0);
+		}
 		if (getl == -1)
 		{
-			perror("getline"), exit(0);
+			perror("getline"), free(buf), exit(0);
 		}
 		if (getl > 1)
 		{
@@ -43,11 +45,13 @@ int promp(int ac, char *av[], char *envp[])
 				exec = execve(tokens[0], tokens, envp);
 				if (exec == -1)
 					path(tokens, envp);
+				free(buf);
 				exit(0);
 			}
 			if (son > 0)
 				wait(&sts);
 		}
 	}
+	free(buf);
 	return (0);
 }
