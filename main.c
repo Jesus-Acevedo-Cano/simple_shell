@@ -26,8 +26,8 @@ int main(int ac, char *av[], char *envp[])
  *sighandl - function that handle the signals
  *@sig: int variable that take the signal to handle it
  */
-void sighandl(int sig) 
+void sighandl(int sig)
 {
-	signal(sig, SIG_IGN);
-	signal(SIGINT, sighandl);
+	(void) sig;
+	write(1, "\n$ ", 3);
 }
