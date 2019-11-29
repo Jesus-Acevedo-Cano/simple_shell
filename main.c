@@ -12,6 +12,8 @@ int main(int ac, char *av[], char *envp[])
 {
 	int i = 0;
 
+	signal(SIGINT, sighandl);
+
 	if (ac > 1)
 	{
 		/*exec(ac, av, envp);*/
@@ -19,4 +21,14 @@ int main(int ac, char *av[], char *envp[])
 	else
 		i = promp(ac, av, envp);
 	return (i);
+}
+/**
+ *
+ *
+ *
+ */
+void sighandl(int sig) 
+{
+	signal(sig, SIG_IGN);
+	signal(SIGINT, sighandl);
 }

@@ -11,8 +11,10 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <signal.h>
 
 /*declared functions*/
+void sighandl(int sig);
 int promp(int ac, char *av[], char *envp[]);
 int _strcmp(char *s1, char *s2);
 void path(char **tokens, char **env);
