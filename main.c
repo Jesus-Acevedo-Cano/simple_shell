@@ -23,9 +23,8 @@ int main(int ac, char *av[], char *envp[])
 	return (i);
 }
 /**
- *
- *
- *
+ *sighandl - function that handle the signals
+ *@sig: int variable that take the signal to handle it
  */
 void sighandl(int sig) 
 {
